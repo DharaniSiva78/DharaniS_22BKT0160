@@ -1,0 +1,13 @@
+com\example\bfh\dto\GenerateWebhookResponse.class
+com\example\bfh\dto\GenerateWebhookRequest.class
+com\example\bfh\repo\SqlSolutionRepository.class
+com\example\bfh\model\SqlSolution.class
+com\example\bfh\config\AppProperties$Solution.class
+com\example\bfh\config\AppProperties.class
+com\example\bfh\service\SqlSolver.class
+com\example\bfh\service\EvenQuestionSolver.class
+com\example\bfh\service\OddQuestionSolver.class
+com\example\bfh\runner\StartupRunner.class
+com\example\bfh\BfhJavaApplication.class
+com\example\bfh\dto\SubmitRequest.class
+com\example\bfh\service\ApiClient.class

@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+bfh:
+  base-url: "https://bfhldevapigw.healthrx.co.in"
+  name: "Dharani S"
+  reg-no: "22BKT0160"
+  email: "dharanisiva701@gmail.com"
+  solution:
+    final-query: |
+      SELECT
+        e.emp_id,
+        e.first_name,
+        e.last_name,
+        d.department_name,
+        (
+          SELECT COUNT(*)
+          FROM employee e2
+          WHERE e2.department = e.department
+            AND e2.dob > e.dob
+        ) AS younger_employees_count
+      FROM employee e
+      JOIN department d
+        ON d.department_id = e.department
+      ORDER BY e.emp_id DESC;
